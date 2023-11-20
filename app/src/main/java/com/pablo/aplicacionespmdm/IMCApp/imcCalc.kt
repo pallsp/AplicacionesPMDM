@@ -3,17 +3,13 @@ package com.pablo.aplicacionespmdm.IMCApp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.google.android.material.slider.RangeSlider
-import com.pablo.aplicacionespmdm.MessageApp.messageReceived
 import com.pablo.aplicacionespmdm.R
 import java.lang.Math.pow
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
-import kotlin.math.pow
 
 class imcCalc : AppCompatActivity() {
 
@@ -41,7 +37,7 @@ class imcCalc : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lololo)
+        setContentView(R.layout.activity_imcapp)
 
         initComponents()
         initListeners()
