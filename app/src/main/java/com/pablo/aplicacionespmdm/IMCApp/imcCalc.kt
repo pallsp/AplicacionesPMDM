@@ -12,6 +12,7 @@ import com.pablo.aplicacionespmdm.MessageApp.messageReceived
 import com.pablo.aplicacionespmdm.R
 import java.lang.Math.pow
 import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
 import kotlin.math.pow
 
 class imcCalc : AppCompatActivity() {
@@ -87,7 +88,10 @@ class imcCalc : AppCompatActivity() {
     }
 
     private fun calculateIMC():Double{
+        val dfs = DecimalFormatSymbols()
+        dfs.decimalSeparator = '.'
         val df = DecimalFormat("#.##")
+        df.decimalFormatSymbols = dfs
         val imc = currentWeight / pow(currentHeight.toDouble() / 100,2.0)
 
         return df.format(imc).toDouble()

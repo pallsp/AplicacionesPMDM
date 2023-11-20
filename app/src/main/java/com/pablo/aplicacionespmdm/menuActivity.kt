@@ -1,14 +1,18 @@
 package com.pablo.aplicacionespmdm
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.pablo.aplicacionespmdm.BoardgamesApp.BoardgameActivity
+import com.pablo.aplicacionespmdm.ColorsApp.ColorsActivity
 import com.pablo.aplicacionespmdm.HelloApp.MainActivity
 import com.pablo.aplicacionespmdm.IMCApp.imcCalc
 import com.pablo.aplicacionespmdm.MessageApp.messageSended
 
 class menuActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
@@ -22,6 +26,20 @@ class menuActivity : AppCompatActivity() {
         var btnIMCApp = findViewById<Button>(R.id.btnIMC)
         btnIMCApp.setOnClickListener{navigateToIMCApp()}
 
+        var btnBoardApp = findViewById<Button>(R.id.btnBoardgame)
+        btnBoardApp.setOnClickListener {navigateToBoardApp()}
+
+        var btnColorApp = findViewById<Button>(R.id.btnColorsApp)
+        btnColorApp.setOnClickListener {navigateToColorApp()}
+
+    }
+    private fun navigateToColorApp() {
+        var intent = Intent(this, ColorsActivity::class.java)
+        startActivity(intent)
+    }
+    private fun navigateToBoardApp() {
+        var intent = Intent(this,BoardgameActivity::class.java)
+        startActivity(intent)
     }
 
     private fun navigateToIMCApp() {
