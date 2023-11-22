@@ -79,17 +79,8 @@ class ColorsActivity : AppCompatActivity() {
                 getString(R.string.color_violet)->"violet"
                 else->"black"
             }
-            val currentBar = when(selectedRadioButtonBar.text){
-                "H1 (20%)"->"H120"
-                "H2 (50%)"->"H250"
-                "H3 (80%)"->"H380"
-                "V1 (20%)"->"V120"
-                "V2 (35%)"->"V235"
-                "V3 (50%)"->"V350"
-                "V4 (65%)"->"V565"
-                else->"V580"
-            }
-            updateColors(currentBar.subSequence(0,2),currentColor)
+
+            updateColors(selectedRadioButtonBar.text.subSequence(0,2),currentColor)
             dialog.hide()
         }
         dialog.show()

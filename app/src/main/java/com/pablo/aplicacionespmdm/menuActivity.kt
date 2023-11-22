@@ -10,6 +10,7 @@ import com.pablo.aplicacionespmdm.ColorsApp.ColorsActivity
 import com.pablo.aplicacionespmdm.HelloApp.MainActivity
 import com.pablo.aplicacionespmdm.IMCApp.imcCalc
 import com.pablo.aplicacionespmdm.MessageApp.messageSended
+import com.pablo.aplicacionespmdm.SuperheroApp.SuperheroListActivity
 
 class menuActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -32,7 +33,16 @@ class menuActivity : AppCompatActivity() {
         var btnColorApp = findViewById<Button>(R.id.btnColorsApp)
         btnColorApp.setOnClickListener {navigateToColorApp()}
 
+        var btnSuperheroApp = findViewById<Button>(R.id.btnSuperheroApp)
+        btnSuperheroApp.setOnClickListener {navigateToSuperheroApp()}
+
     }
+
+    private fun navigateToSuperheroApp() {
+        var intent = Intent(this, SuperheroListActivity::class.java)
+        startActivity(intent)
+    }
+
     private fun navigateToColorApp() {
         var intent = Intent(this, ColorsActivity::class.java)
         startActivity(intent)

@@ -62,4 +62,15 @@
         android:textStyle="bold"
         android:textAlignment="center"
         />
+    <Button
+        android:id="@+id/btnSuperheroApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="SuperheroApp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        />
 </LinearLayout>
